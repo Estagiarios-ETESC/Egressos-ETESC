@@ -1,0 +1,280 @@
+/* ===========
+ Global styles
+ =============*/
+
+:root {
+  --color-primary: #dff9fd;
+  --color-secondary: #000dfb;
+  --color-secondary-opacity: #000dfb5b;
+  --color-light: #fff;
+  --color-dark: #00528e;
+  --color-dark2: #5792ff;
+  --color-link: #a0dbff;
+
+  /* b9e1ff */
+
+  /* --body-bg-color:  */
+  --card-bg: #fff;
+  --header-bg: #fff;
+  --header-clr: #fff;
+  --color-bg-light: #a0dbff;
+  --footer-bg: rgba(0, 0, 0, 0.3);
+
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: sans-serif;*/
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.4;
+  overflow: auto;
+
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+abbr {
+  color: var(--color-dark2);
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  text-shadow: 2px 2px 0 rgba(33, 22, 222, 0.2);
+  color: black;
+  background: #a4f4ff;
+}
+
+::selection {
+  text-shadow: 2px 2px 0 rgba(33, 22, 222, 0.2);
+  color: black;
+  background: #a4f4ff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #aee4ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(26, 133, 255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 119, 255);
+}
+
+/* ===========
+ header styles
+ =============*/
+
+.header-class {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 75px;
+  backdrop-filter: blur(5px);
+  color: var(--header-clr);
+  background: var(--header-bg);
+  opacity: 0.9;
+  text-align: center;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-class a {
+  color: var(--color-dark);
+  position: absolute;
+  top: 80px;
+  left: 0;
+  margin-left: 1rem;
+}
+
+.header-class a i {
+  margin-right: .75rem;
+}
+
+.header-class a:hover,
+.header-class a:focus {
+  background: transparent;
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+  color: var(--color-primary);
+}
+
+.header-class img {
+  max-width: 250px;
+  margin: 5px 0;
+}
+
+/* ===========
+ Egressos imgs
+ =============*/
+.img-div img {
+  max-width: 250px;
+  height: 250px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+
+  transition: border-radius 300ms ease;
+}
+
+/* ===========
+ Es-alunos cards
+ =============*/
+.exalunos-card {
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--color-dark);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  transition: box-shadow 150ms ease;
+}
+
+.exalunos-card:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.exalunos-card .img-div {
+  margin: 0 auto;
+}
+
+.exalunos-descricao h2 {
+  margin: 1rem 0;
+  font-size: 1.75rem;
+}
+.exalunos-descricao p {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.exalunos-descricao p:last-of-type {
+  max-width: 35ch;
+  font-size: 1.125rem;
+  margin: 0 auto;
+}
+
+.curso-p {
+  color: var(--color-dark2);
+}
+
+@media (min-width: 750px) {
+  .exalunos-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .exalunos-card .img-div {
+    min-width: 300px;
+    margin-right: 1rem;
+  }
+}
+
+/* ===========
+ Footer imgs
+ =============*/
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: var(--footer-bg);
+}
+.footer li {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer span {
+  color: rgba(255, 255, 255, 1);
+  font-weight: var(--fw-700);
+}
+
+/* Utilities */
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  font-weight: var(--fw-700);
+
+  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--color-primary);
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+}
+
+.btn + .btn {
+  margin-left: 0.5rem;
+}
+
+.btn-lg {
+  font-size: 1.5rem;
+}
+.btn-md {
+  font-size: 1.25rem;
+}
+.btn-sm {
+  font-size: 0.8rem;
+}

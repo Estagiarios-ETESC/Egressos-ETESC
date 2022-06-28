@@ -1,0 +1,189 @@
+/* ===========
+ Start section styles
+ =============*/
+
+.start-section {
+  padding: 0.5rem;
+  margin: 5rem 0 1rem;
+  text-align: center;
+}
+
+.start-section h1 {
+  margin-bottom: 5rem;
+  color: var(--color-light);
+  font-size: 2.2rem;
+}
+
+.flex-equal {
+  display: block;
+}
+.flex-equal img {
+  display: none;
+}
+
+.start-section p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  max-width: 40ch;
+  margin: 0 auto;
+}
+
+.icon-div {
+  background: var(--color-primary);
+  color: var(--color-dark);
+  width: 75px;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin: 1.5rem auto 0;
+
+  animation: arrow-up-down 500ms ease infinite alternate;
+}
+
+@keyframes arrow-up-down {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+
+/* ===========
+ Cursos section styles
+ =============*/
+
+.cursos-section {
+  background: var(--color-bg-light);
+  /* height: 170px; */
+  margin-top: 5rem;
+  /* border-bottom: 5px solid rgb(198, 255, 248); */
+}
+
+.cursos-container {
+  margin: 0 1rem;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cursos-container img {
+  /* max-width: 100%; */
+  padding: 0.5rem 0;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+.cursos-tabs {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+
+  transition: all 300ms ease;
+}
+
+.cursos-tabs:hover {
+  outline: 3px solid var(--color-secondary-opacity);
+  outline-offset: -3px;
+}
+
+.btn-cursos {
+  color: var(--color-dark);
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  position: relative;
+}
+
+.btn-cursos::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 25px);
+  height: 3px;
+  background: var(--color-secondary);
+  transform: scaleX(0);
+
+  transition: all 300ms ease;
+}
+
+.cursos-tabs:hover:hover .btn-cursos::after,
+.cursos-tabs:hover:focus .btn-cursos::after {
+  /* width: calc(100% - 25px); */
+  transform: scaleX(1);
+}
+.cursos-tabs:hover .btn-cursos,
+.cursos-tabs:focus .btn-cursos {
+  outline: none;
+  color: var(--color-secondary);
+}
+
+/* Show  for javascript*/
+.cursos-container-border {
+  outline: 3px solid var(--color-secondary) !important;
+  outline-offset: -3px;
+}
+.hide-sc {
+  display: none;
+}
+.show {
+  display: block !important;
+}
+/* ===========
+ Egressos section styles
+ =============*/
+
+.egressos-section {
+  margin-top: 5rem;
+  background: var(--color-bg-light);
+  color: var(--color-dark);
+}
+
+.cursos-content {
+  padding: 1rem;
+  display: none;
+}
+.cursos-content h3 {
+  text-align: center;
+  color: var(--color-dark);
+  margin: 2rem 0 3rem;
+  font-size: 2rem;
+}
+
+/* ===========
+ Media Querys
+ =============*/
+
+@media (min-width: 900px) {
+  .flex-equal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .flex-equal img {
+    display: block;
+  }
+
+  .arrow-div {
+    display: none;
+    height: 0;
+    width: 0;
+
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid var(--color-bg-light);
+
+    position: absolute;
+    top: 187px;
+  }
+
+  .hide-lc {
+    /* display: none; */
+  }
+
+  .hide-sc {
+    display: block;
+  }
+}
