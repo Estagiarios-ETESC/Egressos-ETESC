@@ -30,6 +30,8 @@
   padding: 0;
   box-sizing: border-box;
   /*font-family: sans-serif;*/
+
+  outline: 2px solid green;
 }
 
 body {
@@ -127,7 +129,7 @@ abbr {
 }
 
 .header-class a i {
-  margin-right: .75rem;
+  margin-right: 0.75rem;
 }
 
 .header-class a:hover,
@@ -153,49 +155,6 @@ abbr {
   border-radius: 50%;
 
   transition: border-radius 300ms ease;
-}
-
-/* ===========
- Es-alunos cards
- =============*/
-.exalunos-card {
-  text-align: center;
-  background: var(--card-bg);
-  color: var(--color-dark);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto 1rem;
-  border-radius: 10px;
-
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-  transition: box-shadow 150ms ease;
-}
-
-.exalunos-card:hover {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.exalunos-card .img-div {
-  margin: 0 auto;
-}
-
-.exalunos-descricao h2 {
-  margin: 1rem 0;
-  font-size: 1.75rem;
-}
-.exalunos-descricao p {
-  margin: 1rem 0;
-  font-size: 1.5rem;
-}
-.exalunos-descricao p:last-of-type {
-  max-width: 35ch;
-  font-size: 1.125rem;
-  margin: 0 auto;
-}
-
-.curso-p {
-  color: var(--color-dark2);
 }
 
 @media (min-width: 750px) {
@@ -225,6 +184,30 @@ abbr {
 footer span {
   color: rgba(255, 255, 255, 1);
   font-weight: var(--fw-700);
+}
+
+/* Moving arrow */
+
+.icon-div {
+  background: var(--color-primary);
+  color: var(--color-dark);
+  width: 75px;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin: 1.5rem auto 0;
+  text-align: center;
+
+  animation: arrow-up-down 500ms ease infinite alternate;
+}
+
+@keyframes arrow-up-down {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(30px);
+  }
 }
 
 /* Utilities */
@@ -277,4 +260,23 @@ footer span {
 }
 .btn-sm {
   font-size: 0.8rem;
+}
+
+.btn-readmore {
+  border: none;
+  outline: none;
+  background: none;
+  text-transform: none;
+}
+
+.btn-readmore:hover {
+  background: var(--color-primary);
+
+  color: var(--color-dark);
+}
+
+/* Other */
+
+.noscroll {
+  overflow: hidden;
 }

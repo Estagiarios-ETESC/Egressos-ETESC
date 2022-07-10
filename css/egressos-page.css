@@ -29,7 +29,7 @@
   margin: 0 auto;
 }
 
-.icon-div {
+/* .icon-div {
   background: var(--color-primary);
   color: var(--color-dark);
   width: 75px;
@@ -48,7 +48,7 @@
   to {
     transform: translateY(30px);
   }
-}
+} */
 
 /* ===========
  Cursos section styles
@@ -71,6 +71,7 @@
 
 .cursos-container img {
   /* max-width: 100%; */
+  /* display: none; */
   padding: 0.5rem 0;
   user-drag: none;
   -webkit-user-drag: none;
@@ -126,6 +127,7 @@
   outline-offset: -3px;
 }
 .hide-sc {
+  /* margin: 1rem; */
   display: none;
 }
 .show {
@@ -150,6 +152,110 @@
   color: var(--color-dark);
   margin: 2rem 0 3rem;
   font-size: 2rem;
+}
+
+/* ===========
+ Es-alunos cards
+ =============*/
+.exalunos-card {
+  text-align: center;
+  background: var(--card-bg);
+  color: var(--color-dark);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  transition: box-shadow 150ms ease;
+}
+
+.exalunos-card:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.exalunos-card .img-div {
+  margin: 0 auto;
+}
+.img-div img {
+  max-width: 100%;
+}
+
+.exalunos-descricao h2 {
+  margin: 1rem 0;
+  font-size: 1.75rem;
+}
+.exalunos-descricao p {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.exalunos-descricao p:last-of-type {
+  max-width: 35ch;
+  font-size: 1.125rem;
+  margin: 0 auto;
+}
+
+.curso-p {
+  color: var(--color-dark2);
+}
+
+/*=========
+  Popup Styles 
+  ==========*/
+.hidden-text {
+  display: none;
+}
+.exalunos-card-text {
+  height: 230px;
+  overflow-y: hidden;
+}
+
+.readmore-popup {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(0, 0, 0, 0.6);
+
+  z-index: 10000;
+}
+
+.popup-active {
+  display: flex;
+}
+
+.popup-card {
+  z-index: 10001;
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  background: var(--color-dark);
+  border-radius: 1rem;
+
+  padding: 5rem 2rem;
+}
+
+.popup-text {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 1rem;
+}
+.popup-text span {
+  display: inline;
+}
+
+#popup-btn {
+  float: right;
 }
 
 /* ===========
@@ -179,9 +285,9 @@
     top: 187px;
   }
 
-  .hide-lc {
-    /* display: none; */
-  }
+  /* .hide-lc {
+    display: none;
+  } */
 
   .hide-sc {
     display: block;
