@@ -31,7 +31,7 @@
   box-sizing: border-box;
   /*font-family: sans-serif;*/
 
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 
 body {
@@ -61,7 +61,7 @@ ol {
 }
 
 abbr {
-  color: var(--color-dark2);
+  color: var(--color-secondary);
 }
 
 ::after,
@@ -174,7 +174,7 @@ abbr {
  Footer imgs
  =============*/
 .footer {
-  padding: 30px;
+  padding: 25px;
   text-align: center;
   background: var(--footer-bg);
 }
@@ -184,6 +184,24 @@ abbr {
 footer span {
   color: rgba(255, 255, 255, 1);
   font-weight: var(--fw-700);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0.5rem;
+
+  gap: 3rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+.footer-links a:hover {
+  color: var(--color-link);
 }
 
 /* Moving arrow */

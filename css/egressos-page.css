@@ -247,11 +247,15 @@
   line-height: 1.5;
   font-size: 1.1rem;
   height: 400px;
+  padding: 0.5rem;
   overflow-y: scroll;
   margin: 1rem;
 }
 .popup-text span {
   display: inline;
+}
+.popup-text abbr {
+  color: var(--color-bg-light);
 }
 
 #popup-btn {

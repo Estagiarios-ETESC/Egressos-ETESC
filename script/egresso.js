@@ -57,8 +57,10 @@ readMoreBtnAll.forEach((readMoreBtn) => {
     const current = e.target;
     document.querySelector("body").classList.toggle("noscroll");
 
-    popupText.innerHTML = current.parentNode.innerHTML;
     popupScreen.classList.toggle("popup-active");
+    popupText.innerHTML = current.parentNode.innerHTML;
+    popupText.removeChild(popupText.lastElementChild);
+    console.log(popupText);
   });
 });
 
