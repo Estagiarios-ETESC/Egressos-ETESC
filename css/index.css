@@ -59,7 +59,8 @@
 .ex-alunos-section {
   width: 100%;
   padding: 10px 75px 40px;
-}
+
+ }
 
 .ex-alunos-section > h2 {
   text-align: center;
@@ -100,11 +101,10 @@
 
 .exalunos-home-card {
   padding: 2rem;
-  width: 100%;
-  max-width: 310px;
+  flex: 1;
   min-height: 500px;
   border-radius: 1rem;
-  color: var(--color-dark);
+  color: var(--card-clr);
   background: var(--card-bg);
 
   display: flex;
@@ -236,7 +236,7 @@
 .card {
   /* margin: 20px; */
   padding: 20px;
-  background: rgba(17, 17, 17, 0.103);
+  background: var(--cursos-card-bg);
   width: 100%;
   max-width: 320px;
   min-height: 600px;

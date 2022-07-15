@@ -37,9 +37,9 @@
   border-radius: 3px;
   border: 3px solid var(--color-primary);
 
-  -webkit-box-shadow: -40px 20px 0 var(--color-link);
-  -moz-box-shadow: -40px 20px 0 var(--color-link);
-  box-shadow: -40px 20px 0 var(--color-link);
+  -webkit-box-shadow: -40px 20px 0 var(--color-legends);
+  -moz-box-shadow: -40px 20px 0 var(--color-legends);
+  box-shadow: -40px 20px 0 var(--color-legends);
 }
 
 /* ========
@@ -79,8 +79,14 @@
   0% {
     background-position: left;
   }
-  100% {
+  25%{
+    background-position: top;
+  }
+  75%{
     background-position: right;
+  }
+  100% {
+    background-position: bottom;
   }
 }
 
@@ -97,17 +103,17 @@
   width: 300px;
   height: 300px;
   border-radius: 1.25rem;
-  -webkit-box-shadow: -20px 20px 0 var(--color-link);
-  -moz-box-shadow: -20px 20px 0 var(--color-link);
-  box-shadow: -20px 20px 0 var(--color-link);
+  -webkit-box-shadow: -20px 20px 0 var(--color-legends);
+  -moz-box-shadow: -20px 20px 0 var(--color-legends);
+  box-shadow: -20px 20px 0 var(--color-legends);
 
   transition: box-shadow 300ms ease;
 }
 
 .criadores-card img:hover {
-  -webkit-box-shadow: 20px 20px 0 var(--color-link);
-  -moz-box-shadow: 20px 20px 0 var(--color-link);
-  box-shadow: 20px 20px 0 var(--color-link);
+  -webkit-box-shadow: 20px 20px 0 var(--color-legends);
+  -moz-box-shadow: 20px 20px 0 var(--color-legends);
+  box-shadow: 20px 20px 0 var(--color-legends);
 }
 
 .criadores-card-text {
@@ -124,14 +130,14 @@
 }
 
 .card-reverse img {
-  -webkit-box-shadow: 20px 20px 0 rgb(161, 88, 161);
-  -moz-box-shadow: 20px 20px 0 rgb(161, 88, 161);
-  box-shadow: 20px 20px 0 rgb(161, 88, 161);
+  -webkit-box-shadow: 20px 20px 0 var(--color-dani);
+  -moz-box-shadow: 20px 20px 0 var(--color-dani);
+  box-shadow: 20px 20px 0 var(--color-dani);
 }
 .card-reverse img:hover {
-  -webkit-box-shadow: -20px 20px 0 rgb(161, 88, 161);
-  -moz-box-shadow: -20px 20px 0 rgb(161, 88, 161);
-  box-shadow: -20px 20px 0 rgb(161, 88, 161);
+  -webkit-box-shadow: -20px 20px 0 var(--color-dani);
+  -moz-box-shadow: -20px 20px 0 var(--color-dani);
+  box-shadow: -20px 20px 0 var(--color-dani);
 }
 
 @media (min-width: 650px) {

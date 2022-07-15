@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Egressos da ETESC</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+
 
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -40,17 +42,19 @@
   <body>
     <header class="header-class">
       <!-- <a href="index.html" class="btn-header"><i class="fa-solid fa-angle-left"></i></i>Voltar para home-page</a> -->
-      <img src="img/pngFAETEC.png" alt="" />
+      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
 
-      <button class="nav-btn nav-btn-toggle"><i class="fa-solid fa-bars"></i></button>
+      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
       <nav class="header-nav">
         <button class="nav-btn nav-btn-close"><i class="fa-solid fa-xmark"></i></button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="egressos-da-etesc.html">Egressos</a></li>
           <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
         </ul>
       </nav>
+      <button class="nav-btn nav-btn-dark-mode-toggle"><img src="img/moon.png" alt="" class="nav-dark-toggle-img"></button>
     </header>
 
     <main>
@@ -67,29 +71,6 @@
         </div>
       </section>
 
-      <section class="descricao-section">
-        <h2>Sobre a ETESC</h2>
-        <p>
-          A Escola Técnica Estadual de Santa Cruz (ETESC) é uma escola técnica
-          da cidade do Rio de Janeiro mantida pela Fundação de Apoio à Escola
-          Técnica (FAETEC). Reconhecida como uma das melhores escolas técnicas
-          do estado do Rio de Janeiro, a ETESC oferece, além do ensino médio,
-          cursos técnicos voltados para diversas áreas, como: informática,
-          enfermagem, administração e etc. A instituição localiza-se no Largo do
-          bodegão, em Santa Cruz, e funciona nos turnos da manhã, tarde e noite,
-          de segunda à sábado. Em 2019, foi a 13ª escola pública que mais
-          aprovou alunos no Exame Nacional do Ensino Médio (ENEM).
-        </p>
-
-        <div class="descricao-links">
-          <a href="https://neteducacao.com.br/faetec-2023/" target="_blank"
-            >Como se inscrever na ETESC?</a
-          >
-        </div>
-
-        <a href="sobre-nos.html" class="btn">Sobre Nós <i class="fas fa-angle-right"></i></a>
-      </section>
-
       <section id="cursos-section" class="cursos-section">
         <h2>Cursos da ETESC</h2>
         <div class="container">
@@ -97,7 +78,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/info.png"
+                  src="img/home-page-cursos/infoimg.png"
                   alt="Logo de informática"
                 />
               </div>
@@ -113,7 +94,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/admin.png"
+                  src="img/home-page-cursos/adminimg.png"
                   alt="Logo de administração"
                 />
               </div>
@@ -129,7 +110,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/quimica.png"
+                  src="img/home-page-cursos/quimicaimg.png"
                   alt="Logo de química"
                 />
               </div>
@@ -148,7 +129,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/enfermagem.png"
+                  src="img/home-page-cursos/enfermagemimg.png"
                   alt="Logo de enfermagem"
                 />
               </div>
@@ -163,7 +144,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/eletro.png"
+                  src="img/home-page-cursos/eletroimg.png"
                   alt="Logo de eletromecânica"
                 />
               </div>
@@ -179,7 +160,7 @@
             <div class="card">
               <div class="cursos-card-img">
                 <img
-                  src="img/home-page-cursos/segurança.png"
+                  src="img/home-page-cursos/segurancaimg.png"
                   alt="Logo de segurança de trabalho"
                 />
               </div>
@@ -292,6 +273,29 @@
         </div>
       </section>
 
+      <section class="descricao-section">
+        <h2>Sobre a ETESC</h2>
+        <p>
+          A Escola Técnica Estadual de Santa Cruz (ETESC) é uma escola técnica
+          da cidade do Rio de Janeiro mantida pela Fundação de Apoio à Escola
+          Técnica (FAETEC). Reconhecida como uma das melhores escolas técnicas
+          do estado do Rio de Janeiro, a ETESC oferece, além do ensino médio,
+          cursos técnicos voltados para diversas áreas, como: informática,
+          enfermagem, administração e etc. A instituição localiza-se no Largo do
+          bodegão, em Santa Cruz, e funciona nos turnos da manhã, tarde e noite,
+          de segunda à sábado. Em 2019, foi a 13ª escola pública que mais
+          aprovou alunos no Exame Nacional do Ensino Médio (ENEM).
+        </p>
+
+        <div class="descricao-links">
+          <a href="https://neteducacao.com.br/faetec-2023/" target="_blank"
+            >Como se inscrever na ETESC?</a
+          >
+        </div>
+
+        <!-- <a href="sobre-nos.html" class="btn">Sobre Nós <i class="fas fa-angle-right"></i></a>-->
+      </section>
+
       
     </main>
 
@@ -306,9 +310,9 @@
           >
         </li>
         <ul class="footer-links">
-          <li><a href="sobre-nos.html">Sobre Nós</a></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="egressos-da-etesc.html">Egressos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
         </ul>
       </ul>
     </footer>

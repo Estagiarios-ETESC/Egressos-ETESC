@@ -68,3 +68,33 @@ closePopupBtn.addEventListener("click", (e) => {
   document.querySelector("body").classList.toggle("noscroll");
   popupScreen.classList.toggle("popup-active");
 });
+
+
+// Curso IMG change in dark mode 
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("darkOn")) {
+      // imgChange()
+      console.log("true")
+  } else {
+      console.log("false")
+  }
+})
+
+const cursoImgs = document.querySelectorAll(".cursos-img")
+
+btnDarkToggle.addEventListener("click", imgChange)
+
+darkModeToggle.addEventListener("click", imgChange)
+
+function imgChange() {
+  if (document.body.classList.contains("dark-mode")) {
+    cursoImgs.forEach((cursoImg) => {
+      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + ".png")
+    })  
+  } else {
+    cursoImgs.forEach((cursoImg) => {
+      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + "-old.png")
+    })  
+  }
+}

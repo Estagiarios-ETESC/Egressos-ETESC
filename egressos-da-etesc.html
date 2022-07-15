@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conheça os egressos da ETESC</title>
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/egressos-page.css" />
@@ -41,17 +42,19 @@
   <body>
     <header class="header-class">
       <!-- <a href="index.html" class="btn-header"><i class="fa-solid fa-angle-left"></i></i>Voltar para home-page</a> -->
-      <img src="img/pngFAETEC.png" alt="" />
+      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
 
-      <button class="nav-btn nav-btn-toggle"><i class="fa-solid fa-bars"></i></button>
+      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
       <nav class="header-nav">
         <button class="nav-btn nav-btn-close"><i class="fa-solid fa-xmark"></i></button>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="egressos-da-etesc.html">Egressos</a></li>
           <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
         </ul>
       </nav>
+      <button class="nav-btn nav-btn-dark-mode-toggle"><img src="img/moon.png" alt="" class="nav-dark-toggle-img"></button>
     </header>
 
     <div class="readmore-popup" aria-hidden="true">
@@ -83,31 +86,31 @@
       <section class="cursos-section">
         <div class="flex cursos-container">
           <div id="info" class="cursos-tabs flex-column flex-center cursos-container-border">
-            <img src="img/home-page-cursos/info-old.png" width="100px" />
+            <img src="img/home-page-cursos/infoimg-old.png" width="100px" id="infoimg" class="cursos-img"/>
             <button class="btn btn-cursos btn-sm hide-sc">Informática</button>
             <div id="info-arrow" class="arrow-div show"></div>
           </div>
 
           <div id="admin" class="cursos-tabs flex-column flex-center">
-            <img src="img/home-page-cursos/admin-old.png" width="100px" />
+            <img src="img/home-page-cursos/adminimg-old.png" width="100px" id="adminimg" class="cursos-img"/>
             <button class="btn btn-cursos btn-sm hide-sc">Administração</button>
             <div id="admin-arrow" class="arrow-div"></div>
           </div>
 
           <div id="quim" class="cursos-tabs flex-column flex-center">
-            <img src="img/home-page-cursos/quimica-old.png" width="100px" />
+            <img src="img/home-page-cursos/quimicaimg-old.png" width="100px" id="quimicaimg" class="cursos-img" />
             <button class="btn btn-cursos btn-sm hide-sc">Química</button>
             <div id="quim-arrow" class="arrow-div"></div>
           </div>
 
           <div id="enfer" class="cursos-tabs flex-column flex-center">
-            <img src="img/home-page-cursos/enfermagem-old.png" width="100px" />
+            <img src="img/home-page-cursos/enfermagemimg-old.png" width="100px" id="enfermagemimg" class="cursos-img" />
             <button class="btn btn-cursos btn-sm hide-sc">Enfermagem</button>
             <div id="enfer-arrow" class="arrow-div"></div>
           </div>
 
           <div id="eletro" class="cursos-tabs flex-column flex-center">
-            <img src="img/home-page-cursos/eletro-old.png" width="100px" />
+            <img src="img/home-page-cursos/eletroimg-old.png" width="100px" id="eletroimg" class="cursos-img" />
             <button class="btn btn-cursos btn-sm hide-sc">
               Eletromecânica
             </button>
@@ -115,7 +118,7 @@
           </div>
 
           <div id="st" class="cursos-tabs flex-column flex-center">
-            <img src="img/home-page-cursos/seguranca-old.png" width="100px" />
+            <img src="img/home-page-cursos/segurancaimg-old.png" width="100px" id="segurancaimg" class="cursos-img" />
             <button class="btn btn-cursos btn-sm hide-sc">ST</button>
             <div id="st-arrow" class="arrow-div"></div>
           </div>
@@ -304,9 +307,9 @@
           >
         </li>
         <ul class="footer-links">
-          <li><a href="sobre-nos.html">Sobre Nós</a></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="egressos-da-etesc.html">Egressos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
         </ul>
       </ul>
     </footer>
