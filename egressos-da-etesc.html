@@ -41,22 +41,25 @@
   </head>
   <body>
     <header class="header-class">
-      <!-- <a href="index.html" class="btn-header"><i class="fa-solid fa-angle-left"></i></i>Voltar para home-page</a> -->
-      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
-
-      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
-      <nav class="header-nav">
-        <button class="nav-btn nav-btn-close"><i class="fa-solid fa-xmark"></i></button>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="egressos-da-etesc.html">Egressos</a></li>
-          <li><a href="sobre-nos.html">Sobre Nós</a></li>
-          <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
-        </ul>
-      </nav>
       <button class="nav-btn nav-btn-dark-mode-toggle"><img src="img/moon.png" alt="" class="nav-dark-toggle-img"></button>
+      
+      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
+      
+      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
+      
     </header>
+    
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="egressos-da-etesc.html">Egressos</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
+      </ul>
+    </nav>
 
+    <div class="nav-active-bg" aria-hidden="true"></div>
+    
     <div class="readmore-popup" aria-hidden="true">
       <div class="popup-card">
         <p class="popup-text"></p>
@@ -123,6 +126,17 @@
             <div id="st-arrow" class="arrow-div"></div>
           </div>
         </div>
+
+        <div class="cursos-container-select">
+          <select name="Cursos" id="cursos-select-tag">
+            <option value="info">Informática</option>
+            <option value="admin">Administração</option>
+            <option value="quim">Química</option>
+            <option value="enfer">Enfermagem</option>
+            <option value="eletro">Eletromecânica</option>
+            <option value="st">Segurança do Trabalho</option>
+          </select>
+        </div>
       </section>
 
       <section class="flex-column egressos-section">
@@ -187,6 +201,38 @@
                 </p>
               </div>
             </div>
+
+            <div class="exalunos-card">
+              <div class="img-div">
+                <img src="img/home-page-exalunos/Rayaneinfo.jpg" alt="" />
+              </div>
+              <div class="exalunos-descricao">
+                <h2>Rayane Pinheiro</h2>
+                <p class="curso-p">Informática</p>
+                <p>
+                  Ainda cursando o 3° ano do ensino médio na ETESC, Rayane Pinheiro Bruno participou do processo seletivo da empresa<i> Neosyx </i>em Dezembro de 2020 e foi contratada como estagiária em Abril de 2021. Em Agosto de 2021, Rayane foi efetivada e se tornou a primeira mulher desenvolvedora da empresa, tendo atualmente 19 anos.
+
+
+
+                </p>
+              </div>
+            </div>
+
+            <div class="exalunos-card">
+              <div class="img-div">
+                <img src="img/home-page-exalunos/AndreInfo.jpg" alt="" />
+              </div>
+              <div class="exalunos-descricao">
+                <h2>André Gomes</h2>
+                <p class="curso-p">Informática</p>
+                <p>
+                  Durante a metade do 3° ano, André Gomes Guimarães foi aprovado em novembro de 2018, no processo seletivo realizado pela empresa <i>Neosyx</i>, onde permaneceu até junho de 2021. Em sua jornada na empresa, ele entrou como jovem aprendiz e em 2019 foi promovido para Desenvolvedor Júnior 3. Em 2020, foi promovido para Desenvolvedor Pleno e, em 2021, <span class="hidden-text" id="hidden-text">saiu da profissão de programador e se tornou analista até metade do ano. Por fim, André saiu da Neosyx e foi trabalhar na empresa <i>NasaJon</i>.</span>
+                  <button class="btn btn-readmore">... Leia Mais</button>
+
+                </p>
+              </div>
+            </div>
+
           </div>
 
           <!-- Admin content -->
@@ -194,7 +240,7 @@
             <h3 class="hide-lc">Administração</h3>
             <div class="exalunos-card">
               <div class="img-div">
-                <img src="img/home-page-exalunos/camilaInfo.jpeg" alt="" />
+                <img src="img/400x400temp.png" alt="" />
               </div>
               <div class="exalunos-descricao">
                 <h2>Lorem</h2>
@@ -213,7 +259,7 @@
 
             <div class="exalunos-card">
               <div class="img-div">
-                <img src="img/home-page-exalunos/camilaInfo.jpeg" alt="" />
+                <img src="img/400x400temp.png" alt="" />
               </div>
               <div class="exalunos-descricao">
                 <h2>Lorem</h2>
@@ -232,7 +278,7 @@
 
             <div class="exalunos-card">
               <div class="img-div">
-                <img src="img/home-page-exalunos/camilaInfo.jpeg" alt="" />
+                <img src="img/400x400temp.png" alt="" />
               </div>
               <div class="exalunos-descricao">
                 <h2>Lorem</h2>
@@ -251,7 +297,7 @@
 
             <div class="exalunos-card">
               <div class="img-div">
-                <img src="img/home-page-exalunos/camilaInfo.jpeg" alt="" />
+                <img src="img/400x400temp.png" alt="" />
               </div>
               <div class="exalunos-descricao">
                 <h2>Lorem</h2>
@@ -285,9 +331,11 @@
                   no curso de Letras e Literatura da Língua Portuguesa,
                   estagiando em vários lugares desde então. Em 2019 e 2021,
                   estagiou com Mediação Inclusiva, trabalhando em rede privada
-                  em 2022, no colégio Intellectus e atualmente abdicou do
-                  trabalho para terminar a faculdade e estudar o ingrasso no
-                  Mercado Tecnológico usando a área de Letras.
+                  em 2022, <span class="hidden-text" id="hidden-text">no colégio Intellectus e atualmente abdicou do
+                    trabalho para terminar a faculdade e estudar o ingrasso no
+                    Mercado Tecnológico usando a área de Letras.</span>
+                  <button class="btn btn-readmore">... Leia Mais</button>
+
                 </p>
               </div>
             </div>
@@ -313,5 +361,27 @@
         </ul>
       </ul>
     </footer>
+
+     <!--Plug in Vlibras-->
+
+     <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!--Style VLIBRAS-->
+    <style>
+       .access-button{
+        width: 35% !important;
+         border-radius: 50px !important;
+         border: 5px solid #ffffff1f !important;
+      }
+    </style>
   </body>
 </html>

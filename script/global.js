@@ -1,25 +1,47 @@
 window.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("darkOn")) {
         // darkModeHandling()
-        console.log("true")
+        document.body.classList.toggle("dark-mode")
+    }
+
+
+
+    if (document.body.classList.contains("dark-mode")) {
+
+        localStorage.setItem("darkOn", "dark-mode")
+        darkToggleImg.setAttribute("src", "img/sun.png")
+        faetecLogo.setAttribute("src", "img/pngFAETEC-light.png")
+        
     } else {
-        console.log("false")
+
+        localStorage.removeItem("darkOn")
+        darkToggleImg.setAttribute("src", "img/moon.png")
+        faetecLogo.setAttribute("src", "img/pngFAETEC.png")
     }
 })
 
 // HEADER Navgation
 
 const navBtnToggle = document.querySelector(".nav-btn-toggle")
-const navBtnCLose = document.querySelector(".nav-btn-close")
 
 const navBar = document.querySelector(".header-nav")
+const navActiveBg = document.querySelector(".nav-active-bg")
 
 
 navBtnToggle.addEventListener("click", () => {
     navBar.classList.toggle("header-nav-active")
+
+    navActiveBg.classList.toggle("nav-active-bg-active")
+
+    document.body.classList.toggle("noscroll")
 })
-navBtnCLose.addEventListener("click", () => {
+
+navActiveBg.addEventListener("click", () => {
     navBar.classList.toggle("header-nav-active")
+
+    navActiveBg.classList.toggle("nav-active-bg-active")
+
+    document.body.classList.toggle("noscroll")
 })
 
 
@@ -35,16 +57,17 @@ darkModeToggle.addEventListener("click", darkModeHandling)
 
 function darkModeHandling() {
     document.body.classList.toggle("dark-mode")
+
     
     if (document.body.classList.contains("dark-mode")) {
 
-        localStorage.setItem("darkOn", true)
+        localStorage.setItem("darkOn", "dark-mode")
         darkToggleImg.setAttribute("src", "img/sun.png")
         faetecLogo.setAttribute("src", "img/pngFAETEC-light.png")
         
     } else {
 
-        localStorage.setItem("darkOn", false)
+        localStorage.removeItem("darkOn")
         darkToggleImg.setAttribute("src", "img/moon.png")
         faetecLogo.setAttribute("src", "img/pngFAETEC.png")
     }

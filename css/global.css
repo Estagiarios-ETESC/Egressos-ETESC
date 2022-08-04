@@ -7,6 +7,8 @@ Global styles
   --color-secondary: #8cc2ff;
   --color-secondary-opacity: #000dfb5b;
   --color-light: #fff;
+  --color-light-toggle: #fff;
+  --color-light-toggle2: #000;
   --color-light-change: #fff;
   --color-dark: #045AB6;
   --color-dark2: #5792ff;
@@ -19,6 +21,8 @@ Global styles
   --color-scrollbar-track: #aee4ff;
   --color-scrollbar-thumb: rgb(26, 133, 255);
   --color-scrollbar-hover: #4ca7fc;
+  --container-border-curso: #00528E;
+  --border-curso-hover: #2495ff;
 
   /* b9e1ff */
 
@@ -43,6 +47,8 @@ Global styles
   --color-secondary: #000dfb;
   --color-secondary-opacity: #000dfb5b;
   --color-light: #fff;
+  --color-light-toggle: #000;
+  --color-light-toggle2: #fff;
   --color-light-change: #000;
   --color-dark: #042f4e;
   --color-dark2: #5792ff;
@@ -50,18 +56,20 @@ Global styles
   /*CORES ADICIONADAS*/
   --color-legends: #00528e;
   --color-dani: rgb(80, 33, 80);
-  --color-cursos: rgb(64, 94, 138) ;
+  --color-cursos: #15476c ;
   --card-border: #a0dbff;
   --color-abbr: #fff;
   --color-scrollbar-track: #0c3c53;
   --color-scrollbar-thumb: #4ca7fc;
   --color-scrollbar-hover: rgb(26, 133, 255);
+  --container-border-curso: #87b4cf; 
+  --border-curso-hover: #fff;
   /*FIM DAS CORES ADICIONADAS*/
   
   /* b9e1ff */
   
   /* --body-bg-color:  #042f4e*/
-  --card-bg: #00538fc9;
+  --card-bg: #063b62;
   --card-clr: #a0dbff;
   --cursos-card-bg: #054874d0;
   --header-bg: #33334464;
@@ -80,6 +88,10 @@ Global styles
   /*font-family: sans-serif;*/
   
   /* outline: 2px solid green; */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -206,6 +218,7 @@ abbr {
 .nav-btn-toggle {
   position: absolute;
   right: 8%;
+  color: var(--color-light-toggle2);
 }
 
 .nav-btn-close {
@@ -217,25 +230,39 @@ abbr {
 .header-nav {
   position: fixed;
   right: 0;
-  top: 0;
+  bottom: 0;
   backdrop-filter: blur(4rem);
 
   transform: translateX(100%);
   width: 250px;
-  height: 100vh;
+  height: calc(100vh - 75px);
   background: var(--header-nav-bg);
 
   display: flex;
   flex-direction: column;
-  padding: 4rem 3rem;
+  padding: .5rem 3rem;
 
   align-items: flex-end;
   justify-content: flex-start;
 
   transition: transform 250ms ease;
+
+  z-index: 10000;
 }
 .header-nav-active {
   transform: translateX(0);
+}
+
+.nav-active-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.671);
+  z-index: 1000;
+  display: none;
+}
+
+.nav-active-bg-active {
+  display: block;
 }
 
 /* @supports() */

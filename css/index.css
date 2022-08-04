@@ -7,7 +7,12 @@
   min-height: 720px;
   /* background: #444; */
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .home-section-bg {
   width: 100%;
   min-height: 720px;
@@ -19,18 +24,23 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
+  
   /*filter: blur(5px);*/
   position: absolute;
+}
+
+.home-section-right-img {
+  width: 300px;
+  margin-left: 2em;
 }
 
 .home-text {
   /* display: none; */
   /*background: rgba(255, 255, 255, 0.21);*/
   color: rgb(225, 225, 225);
-  position: absolute;
+  /* position: absolute;
   top: 150px;
-  left: 100px;
+  left: 100px; */
 
   padding: 50px;
 
@@ -273,11 +283,16 @@
  =============*/
 
 @media (max-width: 775px) {
+.home-section{
+  justify-content: center;
+
+}
+
+.home-section-right-img{
+  display: none;
+}
   .home-text {
     width: 100%;
-    left: 50%;
-    top: 30px;
-    transform: translateX(-50%);
     text-align: center;
   }
   .home-text h1 {

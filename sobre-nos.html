@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nós</title>
-    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/sobrenos.ico" type="image/x-icon">
 
 
     <link rel="stylesheet" href="css/global.css" />
@@ -41,21 +41,24 @@
   </head>
   <body>
     <header class="header-class">
-      <!-- <a href="index.html" class="btn-header"><i class="fa-solid fa-angle-left"></i></i>Voltar para home-page</a> -->
-      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
-
-      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
-      <nav class="header-nav">
-        <button class="nav-btn nav-btn-close"><i class="fa-solid fa-xmark"></i></button>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="egressos-da-etesc.html">Egressos</a></li>
-          <li><a href="sobre-nos.html">Sobre Nós</a></li>
-          <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
-        </ul>
-      </nav>
       <button class="nav-btn nav-btn-dark-mode-toggle"><img src="img/moon.png" alt="" class="nav-dark-toggle-img"></button>
+      
+      <img src="img/pngFAETEC.png" alt="" class="faetec-logo"/>
+      
+      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
+      
     </header>
+    
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="egressos-da-etesc.html">Egressos</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
+      </ul>
+    </nav>
+
+    <div class="nav-active-bg" aria-hidden="true"></div>
 
     <main>
       <section class="about-section">
@@ -151,5 +154,27 @@
         </ul>
       </ul>
     </footer>
+
+     <!--Plug in Vlibras-->
+
+     <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!--Style VLIBRAS-->
+    <style>
+       .access-button{
+        width: 35% !important;
+         border-radius: 50px !important;
+         border: 5px solid #ffffff1f !important;
+      }
+    </style>
   </body>
 </html>
