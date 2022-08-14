@@ -1,7 +1,6 @@
 const cursosTabs = document.querySelectorAll(".cursos-tabs");
 const cursosContent = document.querySelectorAll(".cursos-content");
 const cursosSelectTag = document.querySelector("#cursos-select-tag");
-const cursoImgs = document.querySelectorAll(".cursos-img");
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.body.classList.contains("dark-mode")) {
@@ -76,55 +75,6 @@ cursosSelectTag.addEventListener("input", () => {
   cursosContentItem.classList.add("show");
 });
 
-// POPUP Handling
-let readMoreBtnAll;
-
-function waitForElm(selector) {
-  return new Promise((resolve) => {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
-    }
-
-    const observer = new MutationObserver((mutations) => {
-      if (document.querySelector(selector)) {
-        resolve(document.querySelector(selector));
-        observer.disconnect();
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-  });
-}
-waitForElm(".btn-readmore").then((elm) => {
-  readMoreBtnAll = document.querySelectorAll(".btn-readmore");
-});
-
-const closePopupBtn = document.querySelector("#popup-btn");
-console.log(readMoreBtnAll);
-
-const popupScreen = document.querySelector(".readmore-popup");
-const popupText = document.querySelector(".popup-text");
-
-readMoreBtnAll.forEach((readMoreBtn) => {
-  readMoreBtn.addEventListener("click", (e) => {
-    const current = e.target;
-    document.querySelector("body").classList.toggle("noscroll");
-
-    popupScreen.classList.toggle("popup-active");
-    popupText.innerHTML = current.parentNode.innerHTML;
-    popupText.removeChild(popupText.lastElementChild);
-    console.log(popupText);
-  });
-});
-
-closePopupBtn.addEventListener("click", (e) => {
-  document.querySelector("body").classList.toggle("noscroll");
-  popupScreen.classList.toggle("popup-active");
-});
-
 // Curso IMG change in dark mode
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -135,6 +85,8 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("false");
   }
 });
+
+const cursoImgs = document.querySelectorAll(".cursos-img");
 
 btnDarkToggle.addEventListener("click", imgChange);
 
