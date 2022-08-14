@@ -1,19 +1,25 @@
 const cursosTabs = document.querySelectorAll(".cursos-tabs");
 const cursosContent = document.querySelectorAll(".cursos-content");
 const cursosSelectTag = document.querySelector("#cursos-select-tag");
+const cursoImgs = document.querySelectorAll(".cursos-img");
 
 window.addEventListener("DOMContentLoaded", () => {
   if (document.body.classList.contains("dark-mode")) {
     cursoImgs.forEach((cursoImg) => {
-      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + ".png")
-    })  
+      cursoImg.setAttribute(
+        "src",
+        "img/home-page-cursos/" + cursoImg.id + ".png"
+      );
+    });
   } else {
     cursoImgs.forEach((cursoImg) => {
-      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + "-old.png")
-    })  
+      cursoImg.setAttribute(
+        "src",
+        "img/home-page-cursos/" + cursoImg.id + "-old.png"
+      );
+    });
   }
-})
-
+});
 
 function selectItem(e) {
   removeShow();
@@ -63,15 +69,41 @@ cursosSelectTag.addEventListener("input", () => {
   console.log(cursosSelectTag.value);
 
   // Mostrar conteudo (Egressos)
-  const cursosContentItem = document.querySelector(`#${cursosSelectTag.value}-content`);
+  const cursosContentItem = document.querySelector(
+    `#${cursosSelectTag.value}-content`
+  );
 
   cursosContentItem.classList.add("show");
-})
+});
 
 // POPUP Handling
+let readMoreBtnAll;
 
-const readMoreBtnAll = document.querySelectorAll(".btn-readmore");
+function waitForElm(selector) {
+  return new Promise((resolve) => {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+
+    const observer = new MutationObserver((mutations) => {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+  });
+}
+waitForElm(".btn-readmore").then((elm) => {
+  readMoreBtnAll = document.querySelectorAll(".btn-readmore");
+});
+
 const closePopupBtn = document.querySelector("#popup-btn");
+console.log(readMoreBtnAll);
 
 const popupScreen = document.querySelector(".readmore-popup");
 const popupText = document.querySelector(".popup-text");
@@ -93,32 +125,35 @@ closePopupBtn.addEventListener("click", (e) => {
   popupScreen.classList.toggle("popup-active");
 });
 
-
-// Curso IMG change in dark mode 
+// Curso IMG change in dark mode
 
 window.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("darkOn")) {
-      // imgChange()
-      console.log("true")
+    // imgChange()
+    console.log("true");
   } else {
-      console.log("false")
+    console.log("false");
   }
-})
+});
 
-const cursoImgs = document.querySelectorAll(".cursos-img")
+btnDarkToggle.addEventListener("click", imgChange);
 
-btnDarkToggle.addEventListener("click", imgChange)
-
-darkModeToggle.addEventListener("click", imgChange)
+darkModeToggle.addEventListener("click", imgChange);
 
 function imgChange() {
   if (document.body.classList.contains("dark-mode")) {
     cursoImgs.forEach((cursoImg) => {
-      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + ".png")
-    })  
+      cursoImg.setAttribute(
+        "src",
+        "img/home-page-cursos/" + cursoImg.id + ".png"
+      );
+    });
   } else {
     cursoImgs.forEach((cursoImg) => {
-      cursoImg.setAttribute("src", "img/home-page-cursos/" + cursoImg.id + "-old.png")
-    })  
+      cursoImg.setAttribute(
+        "src",
+        "img/home-page-cursos/" + cursoImg.id + "-old.png"
+      );
+    });
   }
 }
