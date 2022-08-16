@@ -142,7 +142,7 @@ abbr {
   background: #a4f4ff;
 }
 
-/*SCRO*/
+/*SCROLL*/
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -201,7 +201,6 @@ abbr {
 .header-class img {
   width: 100%;
   max-width: 250px;
-  margin: 5px 0;
 }
 
 /* Header Nav bar */

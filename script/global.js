@@ -58,6 +58,11 @@ darkModeToggle.addEventListener("click", darkModeHandling)
 function darkModeHandling() {
     document.body.classList.toggle("dark-mode")
 
+    try {
+        divCurved.classList.toggle("div-curved-dark")
+    } catch (error) {
+        console.log(".")
+    } 
     
     if (document.body.classList.contains("dark-mode")) {
 

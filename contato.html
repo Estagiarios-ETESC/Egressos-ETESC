@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale Conosco</title>
+    <link rel="shortcut icon" href="img/sobrenos.ico" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contato.css" />
+
+    <script src="script/global.js" defer></script>
+    <script src="script/contato.js" defer></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-class">
+      <button class="nav-btn nav-btn-dark-mode-toggle"><img src="img/moon.png" alt="" class="nav-dark-toggle-img"></button>
+      
+      <a href="index.html"><img src="img/pngFAETEC.png" alt="" class="faetec-logo"/></a>
+      
+      <button class="nav-btn nav-btn-toggle"><p class="hide-sr">Menu</p><i class="fa-solid fa-bars"></i></button>
+      
+    </header>
+    
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="egressos-da-etesc.html">Egressos</a></li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><button class="nav-dark-mode-toggle nav-btn">Dark Mode</button></li>
+      </ul>
+    </nav>
+
+    <div class="nav-active-bg" aria-hidden="true"></div>
+
+    <main>
+      <section class="contato-section">
+        <div>
+            <h1>Você é um ex-aluno da etesc e gostaria de inspirar outros alunos com o seu caso de sucesso? </h1>
+            <p>Entre em contato com a gente</p>        
+        </div>
+    </section>
+    <div class="div-curved"></div>
+
+    <section class="contato-info-section">
+
+        <div>
+            <h3>E-mail:</h3>
+            <p>egressosetesc@gmail.com</p>
+        </div>
+
+        <div>
+            <h3>Whatsapp:</h3>
+            <p>9999-999</p>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+      <ul>
+        <li>&copy;All rights reserved</li>
+        <li>
+          Endereço:
+          <span
+            >Largo do Bodegão, 46 - Santa Cruz, Rio de Janeiro - RJ,
+            23550-020</span
+          >
+        </li>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="egressos-da-etesc.html">Egressos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </ul>
+    </footer>
+
+     <!--Plug in Vlibras-->
+
+     <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!--Style VLIBRAS-->
+    <style>
+       .access-button{
+        width: 35% !important;
+         border-radius: 50px !important;
+         border: 5px solid #ffffff1f !important;
+      }
+    </style>
+  </body>
+</html>

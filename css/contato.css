@@ -1,0 +1,61 @@
+.contato-section {
+    height: 620px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background: var(--color-bg-light);
+    color: var(--color-light-toggle2);
+}
+
+.contato-section div {
+    text-align: center;
+    max-width: 550px;
+}
+
+.contato-section h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.contato-section p {
+    font-size: 1.25rem;
+    /* color: var(--color-link); */
+}
+
+.div-curved {
+    width: 100%;
+    margin-top: -100px;
+    height: 100px;
+    /* background: var(--color-dark); */
+
+    background-image: url(../img/div-curved-light.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-curved-dark {
+    background-image: url(../img/div-curved-dark.svg);
+}
+
+/* Info section */
+
+.contato-info-section {
+    /* min-height: 400px; */
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    gap: 3rem;
+
+    margin: 4rem 0;
+}
