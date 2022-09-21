@@ -312,9 +312,11 @@
       let errorResult = {
         erro: {
           nome: "Em breve...",
-          curso: "curso",
+          curso: "",
           desc: "O próxima história de sucesso pode ser a sua",
           img: "img/400x400temp.png",
+          btn: "",
+          ano: "",
         },
       };
 
@@ -388,7 +390,12 @@
             </div>
             <div class="exalunos-descricao">
               <h2>${data.nome}</h2>
-              <p class="curso-p">${data.curso}</p>
+              <div>
+                <p class="curso-p">${data.curso}</p>
+                <p>
+                    ${data.ano}
+                </p>    
+              </div>
               <p>
                 ${data.desc}
                 

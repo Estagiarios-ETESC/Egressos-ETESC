@@ -210,8 +210,12 @@
   margin: 1rem 0;
   font-size: 1.75rem;
 }
+.exalunos-descricao > div {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
 .exalunos-descricao p {
-  margin: 1rem 0;
+  margin: 1rem 0 0;
   font-size: 1.5rem;
 }
 .exalunos-descricao p:last-of-type {
