@@ -182,32 +182,42 @@
           <div id="info-content" class="cursos-content show">
             <h3 class="hide-lc">Informática</h3>
 
-            <div id="loading-div"></div>
+            <div class="loading-div"></div>
           </div>
 
           <!-- Admin content -->
           <div id="admin-content" class="cursos-content">
             <h3 class="hide-lc">Administração</h3>
+
+            <div class="loading-div"></div>
           </div>
 
           <!-- Quimica content -->
           <div id="quim-content" class="cursos-content">
             <h3 class="hide-lc">Química</h3>
+
+            <div class="loading-div"></div>
           </div>
 
           <!-- Enfermagem content -->
           <div id="enfer-content" class="cursos-content">
             <h3 class="hide-lc">Enfermagem</h3>
+
+            <div class="loading-div"></div>
           </div>
 
           <!-- Eletro content -->
           <div id="eletro-content" class="cursos-content">
             <h3 class="hide-lc">Elétromecânica</h3>
+
+            <div class="loading-div"></div>
           </div>
 
           <!-- ST content -->
           <div id="st-content" class="cursos-content">
             <h3 class="hide-lc">Segurança do Trabalho</h3>
+
+            <div class="loading-div"></div>
           </div>
         </div>
       </section>
@@ -295,7 +305,7 @@
       // const storage = getStorage(app);
       // console.log(storage);
 
-      const loadingDiv = document.querySelector("#loading-div");
+      const loadingDiv = document.querySelectorAll(".loading-div");
 
       const RTdb = getDatabase();
 
@@ -309,7 +319,9 @@
       };
 
       function getData(path) {
-        loadingDiv.style.display = "block";
+        loadingDiv.forEach((div) => {
+          div.style.display = "block";
+        });
         return new Promise(function (res, rej) {
           get(child(ref(RTdb), path))
             .then((snapshot) => {
@@ -340,7 +352,9 @@
       let enferData = await getData(enferPath);
       let eletroData = await getData(eletroPath);
       let stData = await getData(stPath);
-      loadingDiv.style.display = "none";
+      loadingDiv.forEach((div) => {
+        div.style.display = "none";
+      });
       // console.log(infoData);
       // console.log(stData);
 

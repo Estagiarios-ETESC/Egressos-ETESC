@@ -292,7 +292,7 @@ abbr {
   float: right;
 }
 
-#loading-div {
+.loading-div {
   margin: 0 auto;
   position: relative;
   width: 75px;
